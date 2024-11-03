@@ -36,7 +36,7 @@ resource "docker_container" "php" {
     name = docker_network.my_network.name
   }
 volumes {
-    host_path      = "C:/Users/brude/Documents/Cours_EFREI/Cours_M2/DEVOPS_MLOPS/IAC/TP1/ETAPE_2/test_bdd.php"
+    host_path      = "C:/Users/baffo/Documents/DEVOPS/IAC/TP1/Etape2/test_bdd.php"
     container_path = "/usr/share/nginx/html/test_bdd.php"  # Chemin dans le conteneur
     read_only      = true
 }
@@ -60,7 +60,7 @@ resource "docker_container" "nginx" {
     read_only      = true
   }
   volumes {
-    host_path      = "C:/Users/brude/Documents/Cours_EFREI/Cours_M2/DEVOPS_MLOPS/IAC/TP1/ETAPE_2/test_bdd.php"
+    host_path      = "C:/Users/baffo/Documents/DEVOPS/IAC/TP1/Etape2/test_bdd.php"
     container_path = "/usr/share/nginx/html/test_bdd.php"  # Chemin dans le conteneur
     read_only      = true
   }
